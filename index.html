@@ -1,0 +1,535 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f4f9fc">
+  <meta name="description" content="Bimun Healthcare in Munyaka, Eldoret is open 24/7 for reliable emergency and general medical care. Call 0717 978245 or get directions.">
+  <title>Bimun Healthcare Munyaka | 24/7 Medical Care in Eldoret</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #122c45;
+      --muted: #5c7183;
+      --blue: #0877bd;
+      --blue-dark: #075b94;
+      --mint: #dff5ed;
+      --green: #13865e;
+      --line: #e4edf2;
+      --surface: #ffffff;
+      --background: #f4f9fc;
+      --shadow: 0 18px 50px rgba(20, 57, 82, .09);
+      font-family: Inter, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      font-synthesis: none;
+      text-rendering: optimizeLegibility;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: 90px; }
+    body { margin: 0; color: var(--ink); background: var(--background); line-height: 1.6; }
+    a { color: inherit; text-decoration: none; }
+    button { font: inherit; }
+    .visually-hidden { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; clip-path: inset(50%); }
+    .container { width: min(1120px, calc(100% - 40px)); margin-inline: auto; }
+    .eyebrow {
+      display: inline-flex; align-items: center; gap: 9px; margin: 0 0 14px;
+      color: var(--blue-dark); font-size: .76rem; font-weight: 800;
+      letter-spacing: .13em; text-transform: uppercase;
+    }
+    .eyebrow::before { width: 21px; height: 2px; background: #41b68b; content: ""; }
+    .section { padding: 88px 0; }
+    .section-heading { max-width: 650px; margin-bottom: 36px; }
+    .section-heading h2 { margin: 0 0 12px; font-size: clamp(2rem, 4vw, 2.75rem); line-height: 1.14; letter-spacing: -.04em; }
+    .section-heading p { margin: 0; color: var(--muted); font-size: 1.05rem; }
+
+    /* Navigation */
+    .site-header { position: sticky; z-index: 10; top: 0; border-bottom: 1px solid rgba(225, 236, 243, .85); background: rgba(255,255,255,.94); backdrop-filter: blur(14px); }
+    .nav-wrap { display: flex; min-height: 76px; align-items: center; justify-content: space-between; gap: 24px; }
+    .brand { display: inline-flex; align-items: center; gap: 11px; font-size: .95rem; font-weight: 850; letter-spacing: -.025em; white-space: nowrap; }
+    .brand-mark { display: grid; width: 42px; height: 42px; place-items: center; border-radius: 14px; color: #fff; background: linear-gradient(145deg, #0d8ccb, #075b94); box-shadow: 0 7px 17px rgba(8,119,189,.2); }
+    .brand-mark svg { width: 23px; height: 23px; }
+    .nav-links { display: flex; align-items: center; gap: 28px; color: #4d6477; font-size: .9rem; font-weight: 650; }
+    .nav-links a:hover, .nav-links a:focus-visible { color: var(--blue); }
+    .nav-actions { display: flex; align-items: center; gap: 12px; }
+    .menu-toggle { display: none; width: 44px; height: 44px; align-items: center; justify-content: center; border: 1px solid var(--line); border-radius: 12px; color: var(--ink); background: white; cursor: pointer; }
+
+    /* Buttons and shared cards */
+    .button { display: inline-flex; min-height: 50px; align-items: center; justify-content: center; gap: 9px; padding: 0 19px; border: 1px solid transparent; border-radius: 12px; font-size: .92rem; font-weight: 750; transition: transform .18s ease, box-shadow .18s ease, background .18s ease; }
+    .button:hover { transform: translateY(-2px); }
+    .button-primary { color: white; background: var(--blue); box-shadow: 0 9px 20px rgba(8,119,189,.19); }
+    .button-primary:hover { background: var(--blue-dark); box-shadow: 0 12px 24px rgba(8,119,189,.24); }
+    .button-light { border-color: #d8e5ec; color: var(--ink); background: white; }
+    .button-light:hover { border-color: #a9cfdf; background: #f9fcfe; }
+    .button svg { width: 18px; height: 18px; flex: none; }
+
+    /* Hero */
+    .hero { position: relative; overflow: hidden; padding: 76px 0 82px; background: radial-gradient(ellipse at 83% 18%, rgba(208,241,233,.75), transparent 34%), linear-gradient(120deg, #f5faff 0%, #eef8fb 55%, #f4fbf8 100%); }
+    .hero::after { position: absolute; right: -110px; bottom: -235px; width: 490px; height: 490px; border: 1px solid rgba(8,119,189,.08); border-radius: 50%; box-shadow: 0 0 0 48px rgba(8,119,189,.025), 0 0 0 96px rgba(8,119,189,.02); content: ""; pointer-events: none; }
+    .hero-grid { position: relative; z-index: 1; display: grid; grid-template-columns: 1.08fr .92fr; align-items: center; gap: 64px; }
+    .open-pill { display: inline-flex; align-items: center; gap: 8px; margin-bottom: 22px; padding: 8px 12px; border: 1px solid #d2eee3; border-radius: 999px; color: #176a4d; background: rgba(255,255,255,.72); font-size: .8rem; font-weight: 750; }
+    .open-dot { width: 8px; height: 8px; border-radius: 50%; background: #20a572; box-shadow: 0 0 0 4px rgba(32,165,114,.12); }
+    .hero h1 { max-width: 660px; margin: 0 0 20px; font-size: clamp(2.7rem, 5vw, 4.45rem); line-height: 1.035; letter-spacing: -.06em; }
+    .hero h1 span { color: var(--blue); }
+    .hero-copy { max-width: 570px; margin: 0; color: var(--muted); font-size: 1.08rem; line-height: 1.75; }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 29px; }
+    .trust-line { display: flex; align-items: center; gap: 11px; margin-top: 25px; color: #4f6879; font-size: .88rem; font-weight: 650; }
+    .trust-stars { color: #e5a72a; letter-spacing: 2px; font-size: 1.04rem; }
+    .hero-art { position: relative; min-height: 410px; display: grid; place-items: center; }
+    .art-orbit { position: absolute; width: 360px; height: 360px; border: 1px solid rgba(8,119,189,.12); border-radius: 50%; background: linear-gradient(145deg, rgba(255,255,255,.75), rgba(218,243,239,.58)); box-shadow: inset 0 0 50px rgba(255,255,255,.8); }
+    .art-orbit::before, .art-orbit::after { position: absolute; border: 1px solid rgba(8,119,189,.09); border-radius: 50%; content: ""; }
+    .art-orbit::before { inset: 24px; }
+    .art-orbit::after { inset: 50px; }
+    .care-card { position: relative; z-index: 1; width: min(330px, 82%); padding: 25px; border: 1px solid rgba(255,255,255,.9); border-radius: 24px; background: rgba(255,255,255,.94); box-shadow: 0 24px 65px rgba(25,75,103,.15); transform: rotate(-2deg); }
+    .care-card-top { display: flex; align-items: center; justify-content: space-between; padding-bottom: 19px; border-bottom: 1px solid #edf2f5; }
+    .care-card-top strong { font-size: .95rem; }
+    .care-icon { display: grid; width: 45px; height: 45px; place-items: center; border-radius: 15px; color: var(--blue); background: #eaf6fc; }
+    .care-icon svg { width: 24px; height: 24px; }
+    .care-card h2 { margin: 20px 0 5px; font-size: 1.55rem; letter-spacing: -.04em; }
+    .care-card > p { margin: 0; color: var(--muted); font-size: .88rem; }
+    .care-stat { display: flex; align-items: center; gap: 12px; margin-top: 23px; padding: 13px; border-radius: 14px; background: #f2faf7; }
+    .stat-check { display: grid; width: 36px; height: 36px; flex: none; place-items: center; border-radius: 11px; color: var(--green); background: #dbf2e9; font-weight: 900; }
+    .care-stat strong, .care-stat span { display: block; }
+    .care-stat strong { font-size: .83rem; }
+    .care-stat span { color: var(--muted); font-size: .75rem; }
+    .floating-note { position: absolute; z-index: 2; right: 0; bottom: 47px; display: flex; align-items: center; gap: 10px; padding: 12px 15px; border: 1px solid #e6eff2; border-radius: 14px; background: white; box-shadow: var(--shadow); font-size: .8rem; font-weight: 750; }
+    .floating-note span { display: grid; width: 31px; height: 31px; place-items: center; border-radius: 10px; color: var(--green); background: var(--mint); }
+
+    /* Services */
+    .services-section { background: white; }
+    .services-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 15px; }
+    .service-card { min-height: 220px; padding: 22px 19px; border: 1px solid var(--line); border-radius: 17px; background: #fff; transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease; }
+    .service-card:hover { transform: translateY(-4px); border-color: #c6e2ed; box-shadow: var(--shadow); }
+    .service-icon { display: grid; width: 46px; height: 46px; place-items: center; margin-bottom: 19px; border-radius: 14px; color: var(--blue); background: #edf7fc; }
+    .service-icon.green { color: var(--green); background: #e9f7f0; }
+    .service-icon svg { width: 23px; height: 23px; }
+    .service-card h3 { margin: 0 0 8px; font-size: 1rem; line-height: 1.35; }
+    .service-card p { margin: 0; color: var(--muted); font-size: .85rem; line-height: 1.6; }
+
+    /* About */
+    .about-grid { display: grid; grid-template-columns: .9fr 1.1fr; align-items: center; gap: 72px; }
+    .about-visual { position: relative; display: grid; min-height: 365px; place-items: center; overflow: hidden; border-radius: 26px; background: linear-gradient(150deg, #dff2f5 0%, #e9f8ef 100%); }
+    .about-visual::before, .about-visual::after { position: absolute; border: 1px solid rgba(8,119,189,.12); border-radius: 50%; content: ""; }
+    .about-visual::before { width: 300px; height: 300px; }
+    .about-visual::after { width: 230px; height: 230px; }
+    .cross-mark { position: relative; z-index: 1; display: grid; width: 122px; height: 122px; place-items: center; border: 1px solid rgba(255,255,255,.9); border-radius: 36px; color: white; background: linear-gradient(145deg, #138ec7, #0870ae); box-shadow: 0 22px 45px rgba(8,104,157,.25); transform: rotate(-7deg); }
+    .cross-mark svg { width: 65px; height: 65px; }
+    .about-caption { position: absolute; z-index: 2; right: 20px; bottom: 20px; left: 20px; padding: 16px 18px; border: 1px solid rgba(255,255,255,.8); border-radius: 15px; background: rgba(255,255,255,.86); backdrop-filter: blur(8px); }
+    .about-caption strong { display: block; font-size: .91rem; }
+    .about-caption span { color: var(--muted); font-size: .82rem; }
+    .about-copy h2 { margin: 0 0 16px; font-size: clamp(2rem, 4vw, 2.7rem); line-height: 1.14; letter-spacing: -.045em; }
+    .about-copy > p { margin: 0; color: var(--muted); }
+    .benefits { display: grid; gap: 17px; margin: 27px 0 0; padding: 0; list-style: none; }
+    .benefits li { display: flex; align-items: flex-start; gap: 13px; }
+    .benefit-check { display: grid; width: 25px; height: 25px; flex: none; place-items: center; margin-top: 1px; border-radius: 50%; color: var(--green); background: #e3f5ec; font-size: .8rem; font-weight: 900; }
+    .benefits strong, .benefits span { display: block; }
+    .benefits strong { margin-bottom: 2px; font-size: .94rem; }
+    .benefits span { color: var(--muted); font-size: .85rem; }
+
+    /* Appointment request */
+    .appointment-section { background: white; }
+    .appointment-card { display: grid; grid-template-columns: .8fr 1.2fr; overflow: hidden; border: 1px solid var(--line); border-radius: 22px; background: white; box-shadow: var(--shadow); }
+    .appointment-intro { padding: 34px; color: white; background: linear-gradient(155deg, #0c76ae, #124968); }
+    .appointment-intro .eyebrow { color: #c9f3e3; }
+    .appointment-intro h3 { margin: 0 0 12px; font-size: 1.7rem; line-height: 1.2; letter-spacing: -.035em; }
+    .appointment-intro p { margin: 0; color: #d4e8f1; font-size: .92rem; }
+    .appointment-phone { display: inline-flex; min-height: 46px; align-items: center; gap: 9px; margin-top: 24px; padding: 0 14px; border: 1px solid rgba(255,255,255,.3); border-radius: 11px; color: white; font-weight: 750; }
+    .appointment-phone:hover { background: rgba(255,255,255,.1); }
+    .appointment-form { display: grid; grid-template-columns: 1fr 1fr; gap: 17px; padding: 32px; }
+    .form-field { display: grid; align-content: start; gap: 7px; }
+    .form-field.full { grid-column: 1 / -1; }
+    .form-field label { color: var(--ink); font-size: .85rem; font-weight: 700; }
+    .form-field input, .form-field select, .form-field textarea { width: 100%; min-height: 47px; padding: 11px 12px; border: 1px solid #dce7ed; border-radius: 10px; color: var(--ink); background: white; font: inherit; font-size: .9rem; }
+    .form-field textarea { min-height: 88px; resize: vertical; }
+    .form-field input::placeholder, .form-field textarea::placeholder { color: #91a2ad; }
+    .form-field input:focus, .form-field select:focus, .form-field textarea:focus { border-color: var(--blue); outline: 3px solid rgba(8,119,189,.13); }
+    .form-help, .form-status { grid-column: 1 / -1; margin: -4px 0 0; color: var(--muted); font-size: .8rem; }
+    .form-status { min-height: 1.3em; margin: 0; color: var(--green); font-weight: 650; }
+    .appointment-form .button { justify-self: start; cursor: pointer; }
+
+    /* Location and reviews */
+    .location-section { background: #edf6fa; }
+    .location-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+    .location-card, .map-card, .review-card { border: 1px solid #e1ebf0; border-radius: 20px; background: white; box-shadow: 0 10px 32px rgba(25,75,103,.045); }
+    .location-card { padding: 27px; }
+    .detail-row { display: flex; gap: 15px; padding: 17px 0; border-bottom: 1px solid #edf2f5; }
+    .detail-row:first-child { padding-top: 0; }
+    .detail-row:last-child { padding-bottom: 0; border-bottom: 0; }
+    .detail-icon { display: grid; width: 43px; height: 43px; flex: none; place-items: center; border-radius: 13px; color: var(--blue); background: #edf7fc; }
+    .detail-icon.green { color: var(--green); background: #e9f7f0; }
+    .detail-icon svg { width: 21px; height: 21px; }
+    .detail-row strong, .detail-row span { display: block; }
+    .detail-row strong { margin-bottom: 2px; font-size: .91rem; }
+    .detail-row span { color: var(--muted); font-size: .87rem; }
+    .map-card { position: relative; display: flex; min-height: 330px; flex-direction: column; align-items: flex-start; justify-content: flex-end; overflow: hidden; padding: 25px; background-color: #dcefe9; background-image: linear-gradient(33deg, transparent 46%, rgba(255,255,255,.8) 47%, rgba(255,255,255,.8) 50%, transparent 51%), linear-gradient(145deg, transparent 40%, rgba(255,255,255,.65) 41%, rgba(255,255,255,.65) 45%, transparent 46%), linear-gradient(75deg, transparent 58%, rgba(255,255,255,.65) 59%, rgba(255,255,255,.65) 63%, transparent 64%), radial-gradient(ellipse at 30% 26%, #cde6da 0 22%, transparent 23%), radial-gradient(ellipse at 83% 36%, #cbe6d8 0 16%, transparent 17%); }
+    .map-card::before { position: absolute; top: 0; right: 0; bottom: 0; left: 0; background-image: linear-gradient(rgba(255,255,255,.17) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.17) 1px, transparent 1px); background-size: 50px 50px; content: ""; }
+    .map-road { position: absolute; top: 44%; left: -5%; width: 112%; height: 19px; border: 4px solid rgba(255,255,255,.85); border-right: 0; border-left: 0; background: #e8dbb9; transform: rotate(-18deg); }
+    .map-pin { position: absolute; z-index: 1; top: 34%; left: 51%; display: grid; width: 54px; height: 54px; place-items: center; border: 5px solid white; border-radius: 50% 50% 50% 10%; color: white; background: var(--blue); box-shadow: 0 9px 22px rgba(8,71,113,.24); transform: rotate(-45deg); }
+    .map-pin svg { width: 22px; height: 22px; transform: rotate(45deg); }
+    .map-label { position: relative; z-index: 2; width: 100%; padding: 17px; border: 1px solid rgba(255,255,255,.8); border-radius: 14px; background: rgba(255,255,255,.94); }
+    .map-label strong, .map-label span { display: block; }
+    .map-label strong { font-size: .94rem; }
+    .map-label span { margin: 3px 0 12px; color: var(--muted); font-size: .82rem; }
+    .map-label .button { min-height: 43px; }
+    .reviews-section { padding: 78px 0; background: white; }
+    .review-card { display: flex; max-width: 710px; align-items: center; justify-content: space-between; gap: 22px; padding: 27px 30px; }
+    .review-person { display: flex; align-items: center; gap: 15px; }
+    .avatar { display: grid; width: 51px; height: 51px; flex: none; place-items: center; border-radius: 50%; color: #116b9c; background: #dff1f8; font-weight: 850; }
+    .review-person strong, .review-person span { display: block; }
+    .review-person strong { font-size: .94rem; }
+    .review-person span { color: var(--muted); font-size: .81rem; }
+    .review-quote { margin: 17px 0 0; font-size: 1.17rem; font-weight: 720; letter-spacing: -.015em; }
+    .review-stars { color: #e5a72a; font-size: 1.05rem; letter-spacing: 2px; white-space: nowrap; }
+
+    /* Footer */
+    .site-footer { padding: 45px 0 22px; color: #d8e7f1; background: #102c43; }
+    .footer-main { display: flex; align-items: flex-start; justify-content: space-between; gap: 35px; padding-bottom: 31px; }
+    .footer-brand { color: white; }
+    .footer-brand p { max-width: 365px; margin: 15px 0 0; color: #adc0ce; font-size: .87rem; }
+    .footer-contact { display: grid; gap: 9px; font-size: .9rem; }
+    .footer-contact a { color: white; font-weight: 750; }
+    .footer-contact a:hover { text-decoration: underline; }
+    .emergency-note { max-width: 370px; color: #c4d4df; font-size: .82rem; }
+    .emergency-note strong { display: block; margin-bottom: 5px; color: white; }
+    .footer-bottom { display: flex; justify-content: space-between; gap: 20px; padding-top: 19px; border-top: 1px solid rgba(255,255,255,.14); color: #a9bdcb; font-size: .78rem; }
+    .footer-bottom p { margin: 0; }
+    :focus-visible { outline: 3px solid #55b9e8; outline-offset: 3px; }
+
+    @media (max-width: 960px) {
+      .nav-links { gap: 17px; }
+      .hero-grid { gap: 28px; }
+      .services-grid { grid-template-columns: repeat(3, 1fr); }
+      .about-grid { gap: 42px; }
+    }
+    @media (max-width: 900px) {
+      .nav-actions .button { display: none; }
+      .menu-toggle { display: inline-flex; }
+      .nav-links { position: absolute; top: calc(100% + 1px); right: 0; left: 0; display: none; align-items: stretch; gap: 0; padding: 8px 20px 15px; border-bottom: 1px solid var(--line); background: white; box-shadow: 0 16px 24px rgba(18,44,69,.08); }
+      .nav-links.is-open { display: flex; flex-direction: column; }
+      .nav-links a { padding: 12px 4px; border-bottom: 1px solid #f0f4f6; }
+      .nav-links a:last-child { border-bottom: 0; }
+    }
+    @media (max-width: 740px) {
+      .container { width: min(100% - 32px, 560px); }
+      .section { padding: 68px 0; }
+      .nav-wrap { min-height: 68px; }
+      .hero { padding: 57px 0 61px; }
+      .hero-grid { grid-template-columns: 1fr; gap: 26px; }
+      .hero h1 { max-width: 560px; font-size: clamp(2.65rem, 12vw, 4rem); }
+      .hero-copy { font-size: 1rem; }
+      .hero-art { min-height: 335px; }
+      .art-orbit { width: 300px; height: 300px; }
+      .floating-note { right: 2px; bottom: 22px; }
+      .services-grid { grid-template-columns: repeat(2, 1fr); }
+      .service-card { min-height: 205px; padding: 19px 16px; }
+      .about-grid, .location-grid { grid-template-columns: 1fr; gap: 30px; }
+      .appointment-card { grid-template-columns: 1fr; }
+      .appointment-intro { padding: 27px; }
+      .appointment-form { padding: 25px; }
+      .about-visual { min-height: 310px; }
+      .map-card { min-height: 290px; }
+      .footer-main { flex-direction: column; gap: 25px; }
+    }
+    @media (max-width: 420px) {
+      .brand { font-size: .83rem; }
+      .brand-mark { width: 39px; height: 39px; }
+      .hero-actions { align-items: stretch; flex-direction: column; }
+      .hero-actions .button { width: 100%; }
+      .trust-line { align-items: flex-start; flex-wrap: wrap; gap: 6px 10px; }
+      .services-grid { grid-template-columns: 1fr; }
+      .service-card { min-height: 0; }
+      .appointment-form { grid-template-columns: 1fr; }
+      .form-field.full, .form-help, .form-status { grid-column: auto; }
+      .appointment-form .button { width: 100%; }
+      .review-card { align-items: flex-start; flex-direction: column; padding: 23px; }
+      .footer-bottom { flex-direction: column; gap: 7px; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <nav class="container nav-wrap" aria-label="Main navigation">
+      <a class="brand" href="#home" aria-label="Bimun Healthcare home">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none"><path d="M10 3h4v7h7v4h-7v7h-4v-7H3v-4h7V3Z" fill="currentColor"/></svg>
+        </span>
+        <span>BIMUN HEALTHCARE</span>
+      </a>
+      <div class="nav-links" id="nav-links">
+        <a href="#home">Home</a>
+        <a href="#services">Services</a>
+        <a href="#about">About Us</a>
+        <a href="#appointment">Appointments</a>
+        <a href="#location">Location</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <div class="nav-actions">
+        <a class="button button-primary" href="tel:0717978245" aria-label="Call Bimun Healthcare now">
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 3H4.8A1.8 1.8 0 0 0 3 4.8C3 13.75 10.25 21 19.2 21a1.8 1.8 0 0 0 1.8-1.8V17l-5-2-1.4 2.1a15 15 0 0 1-6.7-6.7L10 9 8 4l-1-.99Z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Emergency 24/7
+        </a>
+        <button class="menu-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="nav-links">
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="none" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="container hero-grid">
+        <div>
+          <div class="open-pill"><span class="open-dot"></span> Open 24 hours, every day</div>
+          <p class="eyebrow">Care close to home</p>
+          <h1>Your trusted 24/7 healthcare partner in <span>Munyaka, Eldoret.</span></h1>
+          <p class="hero-copy">Professional, compassionate care whenever you need it. From everyday health concerns to urgent medical attention, our community is always welcome.</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="tel:0717978245">
+              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 3H4.8A1.8 1.8 0 0 0 3 4.8C3 13.75 10.25 21 19.2 21a1.8 1.8 0 0 0 1.8-1.8V17l-5-2-1.4 2.1a15 15 0 0 1-6.7-6.7L10 9 8 4l-1-.99Z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              Call 0717 978245
+            </a>
+            <a class="button button-light" href="https://www.google.com/maps/search/?api=1&query=Bimun+Healthcare+Munyaka+Eldoret" target="_blank" rel="noopener noreferrer">
+              Get directions
+              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M20 10c0 5-8 11-8 11S4 15 4 10a8 8 0 1 1 16 0Z" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="10" r="2.5" stroke="currentColor" stroke-width="1.8"/></svg>
+            </a>
+          </div>
+          <div class="trust-line"><span class="trust-stars" aria-label="5 out of 5 stars">★★★★★</span><span>5.0 rated by local patients</span><span aria-hidden="true">·</span><span>Here for Munyaka</span></div>
+        </div>
+        <div class="hero-art" aria-hidden="true">
+          <div class="art-orbit"></div>
+          <div class="care-card">
+            <div class="care-card-top">
+              <strong>Your health, our priority</strong>
+              <span class="care-icon"><svg viewBox="0 0 24 24" fill="none"><path d="M10 3h4v7h7v4h-7v7h-4v-7H3v-4h7V3Z" fill="currentColor"/></svg></span>
+            </div>
+            <h2>Care around the clock.</h2>
+            <p>Trusted medical support, day or night.</p>
+            <div class="care-stat"><span class="stat-check">✓</span><div><strong>Open 24 hours</strong><span>7 days a week, including holidays</span></div></div>
+          </div>
+          <div class="floating-note"><span>♥</span> Caring for our community</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section services-section" id="services">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">How we can help</p>
+          <h2>Healthcare for every stage of life.</h2>
+          <p>Reliable, welcoming care for you and your family, right here in Munyaka.</p>
+        </div>
+        <div class="services-grid">
+          <article class="service-card">
+            <span class="service-icon"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M8 4.5A2.5 2.5 0 0 1 10.5 2h3A2.5 2.5 0 0 1 16 4.5V6h2a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h2V4.5Z" stroke="currentColor" stroke-width="1.7"/><path d="M9 6h6M12 10v7m-3.5-3.5h7" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg></span>
+            <h3>General consultations</h3><p>Outpatient care and medical advice for everyday health concerns.</p>
+          </article>
+          <article class="service-card">
+            <span class="service-icon green"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 21s8-4 8-11V5l-8-3-8 3v5c0 7 8 11 8 11Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><path d="M10 8h4v3h3v4h-3v3h-4v-3H7v-4h3V8Z" fill="currentColor"/></svg></span>
+            <h3>Emergency &amp; 24-hour care</h3><p>Medical attention is available whenever an urgent need arises.</p>
+          </article>
+          <article class="service-card">
+            <span class="service-icon"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 19V5m0 14h16M8 15l3-4 3 2 5-7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><circle cx="8" cy="15" r="1" fill="currentColor"/><circle cx="11" cy="11" r="1" fill="currentColor"/><circle cx="14" cy="13" r="1" fill="currentColor"/></svg></span>
+            <h3>Laboratory &amp; diagnostics</h3><p>Diagnostic support to help inform your care and next steps.</p>
+          </article>
+          <article class="service-card">
+            <span class="service-icon green"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 21s-8-4.4-8-11a4.5 4.5 0 0 1 8-2.8A4.5 4.5 0 0 1 20 10c0 6.6-8 11-8 11Z" stroke="currentColor" stroke-width="1.7"/><path d="M12 9v6m-3-3h6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg></span>
+            <h3>Maternity &amp; nursing</h3><p>Supportive care for mothers, babies, and families in our community.</p>
+          </article>
+          <article class="service-card">
+            <span class="service-icon"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M8 3v6m8-6v6M5 9h14v10a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V9Z" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/><path d="M12 12v6m-3-3h6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg></span>
+            <h3>Prescription support</h3><p>Help with prescriptions and guidance on your treatment plan.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="about">
+      <div class="container about-grid">
+        <div class="about-visual" aria-hidden="true">
+          <div class="cross-mark"><svg viewBox="0 0 24 24" fill="none"><path d="M10 2h4v8h8v4h-8v8h-4v-8H2v-4h8V2Z" fill="currentColor"/></svg></div>
+          <div class="about-caption"><strong>Local care. Always within reach.</strong><span>Serving Munyaka and surrounding areas</span></div>
+        </div>
+        <div class="about-copy">
+          <p class="eyebrow">A neighbour you can count on</p>
+          <h2>Here for Munyaka, day and night.</h2>
+          <p>Good healthcare should be close, dependable, and there when you need it. Bimun Healthcare is proud to care for individuals and families in Munyaka and nearby Hawaii-Illula and Munyaka Stage.</p>
+          <ul class="benefits">
+            <li><span class="benefit-check">✓</span><div><strong>Community-focused care</strong><span>A welcoming local clinic that understands the needs of our neighbours.</span></div></li>
+            <li><span class="benefit-check">✓</span><div><strong>Professional medical support</strong><span>Thoughtful attention across general and urgent healthcare needs.</span></div></li>
+            <li><span class="benefit-check">✓</span><div><strong>Available around the clock</strong><span>Open 24 hours a day, 7 days a week, whenever care can't wait.</span></div></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section appointment-section" id="appointment">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">Plan a visit</p>
+          <h2>Request a doctor’s appointment.</h2>
+          <p>Share your preferred visit details and we’ll help you arrange a time.</p>
+        </div>
+        <div class="appointment-card">
+          <div class="appointment-intro">
+            <p class="eyebrow">We’re here to help</p>
+            <h3>Let’s find a time that works for you.</h3>
+            <p>Submit your request through WhatsApp. The clinic will need to confirm your appointment; sending a request does not book or guarantee a time.</p>
+            <a class="appointment-phone" href="tel:0717978245">Call 0717 978245 instead</a>
+          </div>
+          <form class="appointment-form" id="appointment-form">
+            <div class="form-field">
+              <label for="appointment-name">Your name</label>
+              <input id="appointment-name" name="name" type="text" autocomplete="name" maxlength="100" required>
+            </div>
+            <div class="form-field">
+              <label for="appointment-phone">Phone number</label>
+              <input id="appointment-phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" maxlength="20" placeholder="e.g. 0712 345678" required>
+            </div>
+            <div class="form-field">
+              <label for="appointment-date">Preferred date</label>
+              <input id="appointment-date" name="date" type="date" required>
+            </div>
+            <div class="form-field">
+              <label for="appointment-time">Preferred time</label>
+              <select id="appointment-time" name="time" required>
+                <option value="">Choose a time</option>
+                <option>Morning (8am–12pm)</option>
+                <option>Afternoon (12pm–5pm)</option>
+                <option>Evening (5pm–9pm)</option>
+                <option>Any time</option>
+              </select>
+            </div>
+            <div class="form-field full">
+              <label for="appointment-reason">What kind of appointment do you need? <span>(optional)</span></label>
+              <textarea id="appointment-reason" name="reason" maxlength="500" placeholder="For example: general consultation"></textarea>
+            </div>
+            <p class="form-help">Please don’t include sensitive medical details. For urgent or emergency care, call the clinic directly.</p>
+            <button class="button button-primary" type="submit">Continue to WhatsApp <span aria-hidden="true">↗</span></button>
+            <p class="form-status" id="appointment-status" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <section class="section location-section" id="location">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">Find your way to us</p>
+          <h2>Close by. Open around the clock.</h2>
+          <p>Visit Bimun Healthcare in Munyaka, Eldoret. We're here whenever you need us.</p>
+        </div>
+        <div class="location-grid">
+          <div class="location-card">
+            <div class="detail-row">
+              <span class="detail-icon"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M20 10c0 5-8 11-8 11S4 15 4 10a8 8 0 1 1 16 0Z" stroke="currentColor" stroke-width="1.7"/><circle cx="12" cy="10" r="2.5" stroke="currentColor" stroke-width="1.7"/></svg></span>
+              <div><strong>Clinic address</strong><span>Hawaii-Illula, Munyaka Stage, Eldoret, Kenya</span></div>
+            </div>
+            <div class="detail-row">
+              <span class="detail-icon"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 5.5A1.5 1.5 0 0 1 5.5 4h13A1.5 1.5 0 0 1 20 5.5v13a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 4 18.5v-13Z" stroke="currentColor" stroke-width="1.7"/><path d="M8 8h.01M12 8h.01M16 8h.01M8 12h.01M12 12h.01M16 12h.01M8 16h.01M12 16h.01" stroke="currentColor" stroke-width="2.3" stroke-linecap="round"/></svg></span>
+              <div><strong>Plus Code</strong><span>G779+PW Eldoret</span></div>
+            </div>
+            <div class="detail-row">
+              <span class="detail-icon green"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.7"/><path d="M12 7v5l3 2" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+              <div><strong>Opening hours</strong><span>Open 24 hours · 7 days a week</span></div>
+            </div>
+            <div class="detail-row">
+              <span class="detail-icon"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 3H4.8A1.8 1.8 0 0 0 3 4.8C3 13.75 10.25 21 19.2 21a1.8 1.8 0 0 0 1.8-1.8V17l-5-2-1.4 2.1a15 15 0 0 1-6.7-6.7L10 9 8 4l-1-.99Z" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+              <div><strong>Call the clinic</strong><span><a href="tel:0717978245">0717 978245</a></span></div>
+            </div>
+          </div>
+          <div class="map-card" role="img" aria-label="Illustrated map showing Bimun Healthcare in Munyaka, Eldoret">
+            <div class="map-road"></div>
+            <span class="map-pin"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M20 10c0 5-8 11-8 11S4 15 4 10a8 8 0 1 1 16 0Z" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="10" r="2.5" stroke="currentColor" stroke-width="2"/></svg></span>
+            <div class="map-label"><strong>Bimun Healthcare Munyaka</strong><span>Hawaii-Illula, Munyaka Stage, Eldoret</span><a class="button button-primary" href="https://www.google.com/maps/search/?api=1&query=Bimun+Healthcare+Munyaka+Eldoret" target="_blank" rel="noopener noreferrer">Open in Google Maps <span aria-hidden="true">↗</span></a></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="reviews-section" aria-labelledby="reviews-title">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">Kind words from our community</p>
+          <h2 id="reviews-title">Trusted by local patients.</h2>
+        </div>
+        <article class="review-card">
+          <div>
+            <div class="review-person"><span class="avatar" aria-hidden="true">SW</span><div><strong>Steve Wasike</strong><span>Local patient</span></div></div>
+            <p class="review-quote">“Best in town”</p>
+          </div>
+          <div class="review-stars" aria-label="Rated 5 out of 5 stars">★★★★★ <span class="visually-hidden">5 out of 5</span></div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" id="contact">
+    <div class="container">
+      <div class="footer-main">
+        <div class="footer-brand">
+          <a class="brand footer-brand" href="#home">
+            <span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M10 3h4v7h7v4h-7v7h-4v-7H3v-4h7V3Z" fill="currentColor"/></svg></span>
+            <span>BIMUN HEALTHCARE</span>
+          </a>
+          <p>Compassionate, dependable healthcare for Munyaka and the Eldoret community. Open 24 hours, every day.</p>
+        </div>
+        <div class="footer-contact"><strong>Get in touch</strong><a href="tel:0717978245">0717 978245</a><span>Hawaii-Illula, Munyaka Stage<br>Eldoret, Kenya · G779+PW</span></div>
+        <div class="emergency-note"><strong>In a medical emergency?</strong>Call us on <a href="tel:0717978245">0717 978245</a> or visit the clinic. For life-threatening emergencies, contact your local emergency services.</div>
+      </div>
+      <div class="footer-bottom"><p>© 2026 Bimun Healthcare Munyaka. All rights reserved.</p><p>Here for your health, day and night.</p></div>
+    </div>
+  </footer>
+  <script>
+    const menuButton = document.querySelector(".menu-toggle");
+    const navLinks = document.querySelector("#nav-links");
+
+    menuButton.addEventListener("click", () => {
+      const isOpen = menuButton.getAttribute("aria-expanded") === "true";
+      menuButton.setAttribute("aria-expanded", String(!isOpen));
+      menuButton.setAttribute("aria-label", isOpen ? "Open navigation menu" : "Close navigation menu");
+      navLinks.classList.toggle("is-open", !isOpen);
+    });
+
+    navLinks.addEventListener("click", (event) => {
+      if (event.target instanceof HTMLAnchorElement) {
+        navLinks.classList.remove("is-open");
+        menuButton.setAttribute("aria-expanded", "false");
+        menuButton.setAttribute("aria-label", "Open navigation menu");
+      }
+    });
+
+    const appointmentForm = document.querySelector("#appointment-form");
+    const appointmentDate = document.querySelector("#appointment-date");
+    const appointmentStatus = document.querySelector("#appointment-status");
+    const today = new Date();
+    const localToday = new Date(today.getTime() - today.getTimezoneOffset() * 60000).toISOString().slice(0, 10);
+    appointmentDate.min = localToday;
+
+    appointmentForm.addEventListener("submit", (event) => {
+      event.preventDefault();
+      if (!appointmentForm.reportValidity()) return;
+
+      const details = new FormData(appointmentForm);
+      const message = [
+        "Hello Bimun Healthcare, I would like to request a doctor's appointment.",
+        `Name: ${details.get("name")}`,
+        `Phone: ${details.get("phone")}`,
+        `Preferred date: ${details.get("date")}`,
+        `Preferred time: ${details.get("time")}`,
+        details.get("reason") ? `Appointment type: ${details.get("reason")}` : ""
+      ].filter(Boolean).join("\n");
+      const whatsappUrl = `https://wa.me/254717978245?text=${encodeURIComponent(message)}`;
+      const whatsappLink = document.createElement("a");
+      whatsappLink.href = whatsappUrl;
+      whatsappLink.target = "_blank";
+      whatsappLink.rel = "noopener noreferrer";
+      whatsappLink.click();
+      appointmentStatus.textContent = "WhatsApp is opening with your request. Send the message there to contact the clinic; your appointment is not confirmed until the clinic replies.";
+    });
+  </script>
+</body>
+</html>
